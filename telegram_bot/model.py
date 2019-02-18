@@ -1,6 +1,3 @@
-# https://discuss.pytorch.org/t/how-to-load-net-structure-of-the-model-and-its-parameters-from-the-pretrained-pth-with-pytrch/12364/7
-# https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
-# https://pytorch.org/docs/stable/notes/serialization.html#recommend-saving-models
 
 from PIL import Image
 import torch
