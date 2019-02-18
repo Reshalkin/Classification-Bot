@@ -29,14 +29,14 @@ def send_prediction_on_photo(bot, update):
 
 
 if __name__ == '__main__':
-    from telegram.ext import Updater, MessageHandler, Filters
-    import logging
-
+	from telegram.ext import Updater, MessageHandler, Filters
+	import logging
     # Включим самый базовый логгинг, чтобы видеть сообщения об ошибках
-    logging.basicConfig(
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        level=logging.INFO)
+	logging.basicConfig(
+		format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+		level=logging.INFO)
     # используем прокси, так как без него у меня ничего не работало(
-    updater = Updater(token=token,  request_kwargs={'proxy_url': 'socks4://168.195.171.42:44880'})
-    updater.dispatcher.add_handler(MessageHandler(Filters.photo, send_prediction_on_photo))
-    updater.start_polling()
+    #updater = Updater(token=token,  request_kwargs={'proxy_url': 'socks4://168.195.171.42:44880'})
+	updater = Updater(token=token,  request_kwargs={'proxy_url': 'socks5://193.59.101.12:4145'})
+	updater.dispatcher.add_handler(MessageHandler(Filters.photo, send_prediction_on_photo))
+	updater.start_polling()
